@@ -64,7 +64,62 @@ public class questions {
 
     }
 
+    static void factor(int n){
+        int sum=0;
+        System.out.println("factors of the given no. are ");
+        for(int i=1;i<=n;i++){
+            if(n%i == 0){
+                sum=sum+i;
+                System.out.print(i+" ");
+            }
+        }
+        System.out.println("sum of factors of given no is "+sum);
+    }
     
+    public static void prime(int n){
+        int count=0;
+        for( int i=2;i<=n/2;i++){
+            if(n%i==0){
+                count=1;
+                break;
+            }
+        }
+        //System.out.println(prime?"prime":"not prime");
+        if(count == 0)
+        System.out.println("prime");
+        else
+        System.out.println("not prime");
+    }
+
+    public static void armstrong(int n){
+        int og,rem;
+        int res=0;
+        og=n;
+        while (og!=0) {
+            rem=og%10;
+            res+=Math.pow(rem, 3);
+            og/=10;
+        }
+        if(res == n)
+        System.out.println("Amstrong");
+        else
+        System.out.println("Not Armstrong");
+    }
+
+    public static boolean perfect(int n){
+        if (n==1) 
+        return false;
+        int sum=1;
+        for (int i=2; i<n; i++) {
+            if(n%i == 0){
+                sum+=i;
+            }
+        }
+        if (sum == n)
+        return true;
+
+        return false;
+    }
 
     public static void main(String[] args) {
        natural(10);
@@ -73,7 +128,14 @@ public class questions {
        System.out.println("Sum : "+sum(10));
        System.out.println("product : "+product(10));
        digit(123);
-       
+       factor(60);
+       prime(100);
+       armstrong(371);
+
+       if(perfect(6))
+       System.out.println("perfect no");
+       else
+       System.out.println("not perfect");
     }
     
 }
