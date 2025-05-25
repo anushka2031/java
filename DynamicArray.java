@@ -32,6 +32,8 @@ public class DynamicArray {
         // System.out.println(arr);
 
         //Dynamic subarray sum
+
+       try {
         ArrayList<Integer> arr = new ArrayList<>();
         arr.add(2);
         arr.add(-7);
@@ -41,43 +43,25 @@ public class DynamicArray {
         arr.add(-3);
         arr.add(0);
         arr.add(1);
-        System.out.println(arr);
-        System.out.println(arr.subList(0, 8));
-        int sum=0;
-
-        for(int i=0;i<arr.size();i++){
-            sum+=arr.get(i);
-        }
-        System.out.println(sum);
-
-       int maxsum=0;
-       
-
-        for(int i=0;i<arr.size();i++){
-            
-            for(int j=i;j<arr.size();j++){
-                arr.subList(i, j);
-                System.out.println(arr.subList(i, j));
-                
-                int subsum=0;
-                for(int k=i;k<j;k++){
-                    subsum+=arr.get(k);
-                    if(subsum>sum)
-                    maxsum=subsum;
-                    
-                    
-                }
-                
-                
-                
-                System.out.println(subsum);
-
-                
-            }
-        }
-
-        System.out.println("Maximum Subarray Sum is "+maxsum);
         
+            
+        int sum, max=arr.get(0), a=0;
+        for(int i=0;i<(arr.size()-2); i++){
+           
+                sum=arr.get(i)+arr.get(i+1)+arr.get(i+2);
+                if(sum>max){
+                    max=sum;
+                    a=i;
+                }   
+            }         
+        
+        System.out.println("the sum is: "+max);
+         System.out.println("the subarray consists of elemnts "+arr.get(a)+" "+arr.get(a+1)+" "+arr.get(a+2));
+       } catch (Exception e) {
+        System.out.println("maximum subarray sum not found");
+       }
+     
+
     }
     
 }
