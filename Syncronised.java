@@ -2,7 +2,6 @@
 // Date: 05/06/2025
 // Day: Thursday
 
-
 class MyThread extends Thread{
     public void run(){
         for(int i=0; i<=10; i++){
@@ -12,7 +11,7 @@ class MyThread extends Thread{
     }
 }
 
-class ProducerConsumer extends Thread{
+class ProducerConsumer{
     private boolean isSignal = false;
 
     public synchronized void producer(){
@@ -36,7 +35,7 @@ class ProducerConsumer extends Thread{
 }
 
 class Bank{
-    static private boolean isFree = false;
+    // static private boolean isFree = false;
     static int balance = 1000;
     int withdraw;
     Bank(int withdraw){
@@ -51,24 +50,24 @@ class Bank{
         else{
             System.out.println(Thread.currentThread().getName() + " Insufficient balance");
         }
-        isFree = true;
+        // isFree = true;
         notify();
     }
     public synchronized void isAvailable(){
-        while(!isFree){
-            try{
-                System.out.println("Waiting for other transaction");
-                wait();
-            }
-            catch(Exception e){
-
-            }
+        try{
+            System.out.println("Waiting for other transaction");
+            wait();
         }
+        catch(Exception e){
+
+        }
+        // while(!isFree){
+        // }
         System.out.println("Now second person can withdraw");
     }
 }
 
-class Day29{
+class Syncronised {
     public static void main(String[] args) {
         // System.out.println("Main Thread");
         // Thread t1 = new Thread(()->{
@@ -125,7 +124,7 @@ class Day29{
         
         Thread t2 = new Thread(()->{
             try{
-                b2.isAvailable();
+                b1.isAvailable();
                 Thread.sleep(1000);
             }
             catch(Exception e){
@@ -134,7 +133,7 @@ class Day29{
             b2.withdraw();
         });
 
-        t1.start();
         t2.start();
+        t1.start();
     }
 }
