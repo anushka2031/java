@@ -1,6 +1,7 @@
 public class srepeat {
 
     public static void main(String[] args) {
+        
         // String str="hhlloo";
         // String newStr="";
         // for(int i=0;i<str.length();i++){
