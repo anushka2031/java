@@ -2,11 +2,15 @@ public class string {
 
     public static void main(String[] args) {
         // String str="hello";
+        // System.out.println("for finding element at index no. 1");
         // System.out.println(str.charAt(1));
-        // System.out.println(str.indexOf("z"));
+        // System.out.println("to extract the index of 'l'");
+        // System.out.println(str.indexOf("l"));
+        // System.out.println("string:");
         // for(int i=0;i<str.length();i++){
         //     System.out.println(str.charAt(i));
         // }
+        // System.out.println("revrsed string :");
         // for(int i=str.length()-1;i>=0;i--){
         //     System.out.println(str.charAt(i));
         // }
