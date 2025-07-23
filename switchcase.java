@@ -1,7 +1,8 @@
 public class switchcase {
 
     public static void main(String[] agrs) {
-        int a=5;
+
+        int a=3;
         switch(a){
             case 1:
             case 2:
@@ -16,6 +17,7 @@ public class switchcase {
             System.out.println("byee!!");
 
         }
+
     }
     
 }
