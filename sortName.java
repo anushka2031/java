@@ -35,6 +35,7 @@ class SortbyRollno implements Comparator<Student>{
         return s1.rollno-s2.rollno;
 
     }
+    
 }
 
 public class sortName {
