@@ -17,5 +17,6 @@ public class linkedlist {
         ll.add(40);
         ll.add(50);
         System.out.println(ll);
+
     }
 }
