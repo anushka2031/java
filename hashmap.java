@@ -19,6 +19,7 @@ public class hashmap {
         System.out.println(key);
       }
 
+
     // HashMap<Integer , Integer> map =new HashMap<>();
     // map.put(1, 12);
     // map.put(2, 13);
@@ -36,6 +37,7 @@ public class hashmap {
     //         System.out.println(value);
     //     }
     // });
+    
 
     System.out.println(map.getOrDefault("id", 0));
 
