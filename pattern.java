@@ -162,7 +162,35 @@ public class pattern {
         //     System.out.println();
         // }
 
+        // int i=1;
+        // for(int j=0;j<5;j++){    
+        //     if(j%2==0)i=0;
+        //     else i=1;
+
+        //     for(int k=0;k<j;k++){
+        //         System.out.print(i);
+        //         i=1-i;
+        //     }
+        //     System.out.println();
+
+        // }
+
         
+        for(int i=1;i<5;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+            for(int k=4;k>i;k--){
+                System.out.print(" ");
+            }
+            for(int l=4;l>i;l--){
+                System.out.print(" ");
+            }
+            for(int p=1;p<=i;p++){
+                System.out.print((i+1)-p);
+            }
+           System.out.println();
+        }
 
 
     }
