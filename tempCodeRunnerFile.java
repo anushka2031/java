@@ -1,7 +1,25 @@
-   String  str="prograaming is a fun and fun is prograaming";
-           String[] words = str.split(" ");
-           HashMap<String,Integer> map = new HashMap<>();
-           for (String i : words) {
-               map.put(i, map.getOrDefault(i, 0)+1);
-           }
-         
+for(int i=0;i<5;i++){
+            for(int j=5;j>=i;j--){
+                System.out.print(" ");
+            }
+            for(int k=0;k<=i;k++){
+                System.out.print("*");
+            }
+            for(int l=1;l<=i;l++){
+                System.out.print("*");
+            }
+           System.out.println();
+        }
+
+        for(int i=0;i<5;i++){
+            for(int j=0;j<i;j++){
+                System.out.print(" ");
+            }
+            for(int k=5;k>i;k--){
+                System.out.print("*");
+            }
+            for(int l=4;l>i;l--){
+                System.out.print("*");
+            }
+           System.out.println();
+        }
