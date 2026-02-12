@@ -7,6 +7,6 @@ public class nextRound {
         Scanner in = new Scanner(System.in);
         int n= in.nextInt();
 
-        int[] arr = in.nextInt();
+        // int[] arr = in.nextInt();
     }
 }

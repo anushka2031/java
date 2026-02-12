@@ -10,11 +10,11 @@ public class georgeAndSleep {
         String s = in.nextLine();
         String t = in.nextLine();
         
-        int sh =(s[0] - '0')*10 + (s[1] - '0');
-        int sm =(s[3] - '0')*10 +(s[4] - '0');
+        int sh =(s.charAt(0) - '0')*10 + (s.charAt(1) - '0');
+        int sm =(s.charAt(3) - '0')*10 +(s.charAt(4) - '0');
 
-        int th =(t[0] - '0')*10 + (t[1] - '0');
-        int tm =(t[3] - '0')*10 + (t[4] - '0');
+        int th =(t.charAt(0) - '0')*10 + (t.charAt(1) - '0');
+        int tm =(t.charAt(3) - '0')*10 + (t.charAt(4) - '0');
 
         int fs = (sh*60) + sm;
         int ft = (th*60) +tm;
@@ -29,10 +29,10 @@ public class georgeAndSleep {
         int resh = f/60;
         int resm = f%60;
 
-        if(resh<10) cout<<"0";
-        cout<<resh<<":";
-        if(resm<10) cout<<"0";
-        cout<<resm;
+        if(resh<10) System.out.print("0");;
+        System.out.print(resh + ":");;
+        if(resm<10) System.out.print("0");;
+        System.out.print(resm);;
 
 
 
