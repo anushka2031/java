@@ -9,6 +9,7 @@ public class moveZeros {
                 arr[l++] = arr[i];
             }
         }
+        
         // System.out.println(l);
         while (l<arr.length) {
             arr[l++] = 0;
